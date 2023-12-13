@@ -12,7 +12,7 @@
 
     <ul class="menu-inner py-1">
         <!-- Dashboard -->
-        <li class="menu-item {{ request()->is('/') ? 'active' : '' }}">
+        <li class="menu-item {{ request()->is('home') ? 'active' : '' }}">
             <a href="{{ route('home') }}" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-home-circle"></i>
                 <div data-i18n="Analytics">Dashboard</div>
@@ -27,10 +27,17 @@
             </a>
         </li>
 
-        <li class="menu-item">
-            <a href="javascript:void(0);" class="menu-link">
+        <li class="menu-item {{ request()->is('suket-menikah/create') ? 'active' : '' }}">
+            <a href="{{ route('suket-menikah.create') }}" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-dock-top"></i>
                 <div data-i18n="Account Settings">Surat Keterangan Nikah</div>
+            </a>
+        </li>
+
+        <li class="menu-item {{ request()->is('suket-skck/create') ? 'active' : '' }}">
+            <a href="{{ route('suket-skck.create') }}" class="menu-link  ">
+                <i class="menu-icon tf-icons bx bx-detail"></i>
+                <div data-i18n="Form Elements">Surat Keterangan Catatan Kriminal</div>
             </a>
         </li>
 
@@ -58,13 +65,6 @@
             <a href="icons-boxicons.html" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-crown"></i>
                 <div data-i18n="Boxicons">Surat Keterangan Beda Nama</div>
-            </a>
-        </li>
-
-        <li class="menu-item">
-            <a href="javascript:void(0);" class="menu-link  ">
-                <i class="menu-icon tf-icons bx bx-detail"></i>
-                <div data-i18n="Form Elements">Surat Keterangan Catatan Kriminal</div>
             </a>
         </li>
         <li class="menu-item">

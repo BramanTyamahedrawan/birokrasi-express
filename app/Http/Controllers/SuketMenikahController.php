@@ -2,18 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\SuketDomisili;
-use App\Http\Requests\StoreSuketDomisiliRequest;
-use App\Http\Requests\UpdateSuketDomisiliRequest;
+use Illuminate\Http\Request;
 
-class SuketDomisiliController extends Controller
+class SuketMenikahController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return view('suket-domisili.suket-domisili-1');
+        return view('suket-menikah.suket-menikah-1');
     }
 
     /**
@@ -21,13 +19,13 @@ class SuketDomisiliController extends Controller
      */
     public function create()
     {
-        return view('suket-domisili.suket-domisili');
+        return view('suket-menikah.suket-menikah');
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreSuketDomisiliRequest $request)
+    public function store(Request $request)
     {
         //
     }
@@ -35,7 +33,7 @@ class SuketDomisiliController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(SuketDomisili $suketDomisili)
+    public function show(string $id)
     {
         //
     }
@@ -43,7 +41,7 @@ class SuketDomisiliController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(SuketDomisili $suketDomisili)
+    public function edit(string $id)
     {
         //
     }
@@ -51,7 +49,7 @@ class SuketDomisiliController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateSuketDomisiliRequest $request, SuketDomisili $suketDomisili)
+    public function update(Request $request, string $id)
     {
         //
     }
@@ -59,7 +57,7 @@ class SuketDomisiliController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(SuketDomisili $suketDomisili)
+    public function destroy(string $id)
     {
         //
     }

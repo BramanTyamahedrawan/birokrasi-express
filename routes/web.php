@@ -3,6 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\KopSuratController;
 use App\Http\Controllers\SuketDomisiliController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\SuketMenikahController;
+use App\Http\Controllers\SuketSKCKController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,9 +18,13 @@ use App\Http\Controllers\SuketDomisiliController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('home');
 
 Route::resource('kop-surat', KopSuratController::class);
 Route::resource('suket-domisili', SuketDomisiliController::class);
+Route::resource('suket-menikah', SuketMenikahController::class);
+Route::resource('suket-skck', SuketSKCKController::class);
+Route::get('/', [LoginController::class, 'index'])->name('login');
+Route::get('register', [LoginController::class, 'create'])->name('register');
+Route::get('/home', function () {
+    return view('welcome');
+})->name('home');

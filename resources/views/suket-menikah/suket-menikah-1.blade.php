@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container-xxl flex-grow-1 container-p-y">
-        <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light"></span> Surat Keterangan Domisili</h4>
+        <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light"></span> Surat Keterangan Menikah</h4>
 
         <!-- Basic Layout -->
         <div class="row">
@@ -46,6 +46,21 @@
                             <label class="form-label" for="basic-default-message">Alamat</label>
                             <textarea id="basic-default-message" class="form-control" placeholder="alamat lengkap"></textarea>
                         </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="basic-default-fullname">Nama Pasangan</label>
+                            <input type="text" class="form-control" id="basic-default-fullname"
+                                placeholder="Nama Lengkap" />
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="basic-default-phone">Agama Pasangan</label>
+                            <input type="text" id="basic-default-phone" class="form-control phone-mask"
+                                placeholder="agama" />
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="basic-default-phone">Status Perkawinan</label>
+                            <input type="text" id="basic-default-phone" class="form-control phone-mask"
+                                placeholder="kawin/belum kawin" />
+                        </div>
                         <a href="{{ route('suket-domisili.index') }}"><button type="submit"
                                 class="btn btn-primary">Update</button></a>
                     </div>
@@ -57,6 +72,8 @@
                         <h5 class="mb-0">Priview Surat</h5>
                         <small class="text-muted float-end">Hasil Surat</small>
                     </div>
+                    <iframe src="{{ asset('storage/9.-surat-keterangan-menikah.pdf') }}" width="100%"
+                        height="600px"></iframe>
                 </div>
             </div>
         </div>

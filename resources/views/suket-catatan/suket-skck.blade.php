@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container-xxl flex-grow-1 container-p-y">
-        <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light"></span> Surat Keterangan Domisili</h4>
+        <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light"></span> Surat Keterangan Catatan Kriminal</h4>
 
         <!-- Basic Layout -->
         <div class="row">
@@ -46,7 +46,7 @@
                             <label class="form-label" for="basic-default-message">Alamat</label>
                             <textarea id="basic-default-message" class="form-control" placeholder="alamat lengkap"></textarea>
                         </div>
-                        <a href="{{ route('suket-domisili.index') }}"><button type="submit"
+                        <a href="{{ route('suket-skck.index') }}"><button type="submit"
                                 class="btn btn-primary">Update</button></a>
                     </div>
                 </div>
